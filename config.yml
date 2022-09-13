@@ -5,8 +5,8 @@ server:
 
 database:
   dbname: 
-  dbuser: "dbuser"
-  dbpassword: "dbpassword"
+  MongoUser: "sai"
+  MongoPassword: "ninja123"
 
 EXAMPLE_VAR: "variable from config.yml"
 EXAMPLE_PATH: "path from config.yml"
