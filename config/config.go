@@ -32,6 +32,7 @@ type Configurations struct {
 	Database     DatabaseConfigurations
 	EXAMPLE_PATH string
 	EXAMPLE_VAR  string
+	MODE         string
 }
 
 // ServerConfigurations exported
