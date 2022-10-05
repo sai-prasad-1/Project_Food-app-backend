@@ -7,11 +7,11 @@ import (
 )
 
 type User struct {
-	ID        primitive.ObjectID `bson:"_id"`
-	CreatedAt time.Time          `bson:"created_at"`
-	Name      string             `bson:"name"`
-	Email     string             `bson:"email"`
-	Password  string             `bson:"password"`
-	Phone     string             `bson:"phone"`
-	Verified  bool               `bson:"verified"`
+	ID        primitive.ObjectID `bson:"_id" json:"id"`
+	CreatedAt time.Time          `bson:"created_at" json:"created_at"`
+	Name      string             `bson:"name" json:"name"`
+	Email     string             `bson:"email" json:"email"`
+	Password  string             `bson:"password" json:"password"`
+	Phone     string             `bson:"phone" json:"phone"`
+	Verified  bool               `bson:"verified" json:"verified"`
 }
