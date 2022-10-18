@@ -29,6 +29,7 @@ func main() {
 
 	r.GET("/user", controllers.UserLogin)
 	r.POST("/user", controllers.UserCreate)
+	r.GET("/test", controllers.Send)
 
 	r.Run(fmt.Sprintf(": %v", config.Server.Port)) // listen and serve on the port specified
 }

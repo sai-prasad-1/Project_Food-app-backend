@@ -6,6 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	userCollection "github.com/sai-prasad-1/Project_Food-app-backend/dbConnection"
+	mailer "github.com/sai-prasad-1/Project_Food-app-backend/emailController"
 	models "github.com/sai-prasad-1/Project_Food-app-backend/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -104,4 +105,20 @@ func UserCreate(c *gin.Context) {
 		return
 	}
 
+}
+
+func Send(c *gin.Context) {
+	emails := []string{"Sai@gmail.com"}
+	message, err := mailer.Send(emails)
+	if err {
+		c.JSON(500, gin.H{
+			"message": "Internal Server Error",
+		})
+		return
+	} else {
+
+		c.JSON(200, gin.H{
+			"message": message,
+		})
+	}
 }

@@ -8,3 +8,5 @@
 # Testing
 *.test
 *.tmp
+# exclude yaml files
+!*.yml
